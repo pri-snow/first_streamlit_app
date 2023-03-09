@@ -44,10 +44,6 @@ try:
 except URLError as e:
   streamlit.error()
 
-
-
-
-
 streamlit.header("The fruit load list contains:")
 
 def get_fruit_load_list():
@@ -60,6 +56,7 @@ if streamlit.button('Geat Fruit Load List'):
   my_data_rows = get_fruit_load_list()
   streamlit.dataframe(my_data_rows)
 
+  streamlit.stop()
 
 add_my_fruit = streamlit.text_input('What fruit would you like to add?','Kiwi')
 streamlit.write('Thanks for adding ', add_my_fruit)
